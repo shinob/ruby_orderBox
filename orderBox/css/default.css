@@ -1,0 +1,194 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 11pt;
+	font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+	color: #333;
+}
+
+body {
+	padding-top: 40px;
+	background-color: #FFF;
+}
+
+div {
+	border: 0px solid #FF0000;
+	margin-top: 0px;
+}
+
+table {
+	border: 0px solid #00FF00;
+}
+
+form {
+	border: 0px solid #0000FF;
+}
+
+input, textarea, select, button {
+/*
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+*/
+  padding: 5px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F00;
+}
+
+.debug {
+	margin: 0px;
+	padding: 5px;
+	border: 0px;
+	background-color: #FF9999;
+}
+
+#head {
+	font-size: 18pt;
+	font-weight: bold;
+	line-height: 70px;
+/*
+	border: none;
+*/
+	border-bottom: 0px solid black;
+	background-color: #FFF;
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu {
+/*
+	line-height: 40px;
+*/
+	height: 40px;
+	border: none;
+	background-color: #003;
+	color: #FFF;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+#menu form p {
+	display: block;
+	border: 0px solid #F00;
+	padding: 0px 5px;
+	margin-left: 5px;
+	line-height:40px;
+	float: left;
+	color: #FFF;
+	cursor: pointer;
+}
+
+#menu a:hover p {
+	color: #F00;
+}
+
+#cont {
+	clear: both;
+}
+
+#foot {
+/*
+	display: none;
+*/
+	border-top: 0px solid #000;
+	text-align: center;
+	padding: 5px;
+}
+
+#login_form {
+}
+
+#login_form table {
+	width: 500px;
+	margin: 0px auto;
+}
+
+#login_form th {
+	text-align: left;
+	padding-right: 5px;
+}
+
+#login_form input {
+	padding: 5px;
+}
+
+#login_message {
+	color: #F00;
+	line-height: 50px;
+}
+
+.list {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.list div {
+	border: 0px solid #F00;
+}
+
+.list form {
+	float: right;
+	width: 10%;
+	text-align: right;
+}
+
+.list form div {
+	cursor: pointer;
+}
+
+.list .product {
+	border-bottom: 1px solid #000;
+	padding: 5px;
+	clear: both;
+}
+
+.list .product .name {
+	float: left;
+	width: 70%;
+}
+
+.list .product .price {
+	float: right;
+	width: 15%;
+	text-align: right;
+}
+
+.edit {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.edit div {
+	padding: 5px;
+	border: 0px solid #0F0;
+}
+
+.edit .label {
+	float: left;
+	width: 15%;
+	clear: both;
+}
+
+.edit .object {
+	float: left;
+}
+
+.main_menu div {
+	border: 1px solid #666;
+	padding: 10px;
+	margin: 5px auto 0px auto;
+	width: 750px;
+	cursor: pointer;
+}
