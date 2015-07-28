@@ -1,8 +1,8 @@
-class KmrProducts < Model
+class KmrCustomers < Model
   
   def initialize()
-    set_value($db, "kmrproducts")
-    @name = "product"
+    set_value($db, "kmrcustomers")
+    @name = "customer"
   end
   
   def show(id)
@@ -53,17 +53,17 @@ class KmrProducts < Model
       
       id = row["id"]
       name = row["name"]
-      price = row["default_price"]
+      note = row["note"]
       
       html += <<EOF
-<div class="product">
+<div class="customer">
   <form method="post" name="item_#{id}">
     <input type="hidden" name="id" value="#{id}">
-    <input type="hidden" name="mode" value="edit_product">
+    <input type="hidden" name="mode" value="edit_customer">
     <div onClick="document.item_#{id}.submit();">[編集]</div>
   </form>
   <div class="name">#{name}</div>
-  <div class="price">#{price} 円</div>
+  <div class="note">#{note}</div>
   <br style="clear: both;" />
 </div>
 EOF

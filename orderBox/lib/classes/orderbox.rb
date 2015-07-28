@@ -12,6 +12,7 @@ class OrderBox < Controller
   	html = ""
   	
     prod = KmrProducts.new()
+    cstm = KmrCustomers.new()
     
     mode = $_POST["mode"]
     id = $_POST["id"].to_i
@@ -37,6 +38,25 @@ class OrderBox < Controller
       html = prod.list_all()
       @title = "商品一覧"
       @menu += menu_for_products()
+      
+    when "list_customer"
+      html = cstm.list_all()
+      @title = "顧客一覧"
+      @menu += menu_for_customers()
+    when "edit_customer"
+      html = cstm.edit(id)
+      @title = "顧客編集"
+      @menu += menu_for_customers()
+    when "add_customer"
+      html = cstm.add()
+      @title = "顧客追加"
+      @menu += menu_for_customers()
+    when "apply_customer"
+      id = cstm.apply($_POST)
+      html = cstm.list_all()
+      @title = "顧客一覧"
+      @menu += menu_for_customers()
+      
     else
       #html = prod.list_all()
       html = load_template({}, "main_menu.html")
@@ -46,6 +66,10 @@ class OrderBox < Controller
     
     return html
     
+  end
+  
+  def menu_main_menu()
+    return make_menu_form("main_menu", "メインメニュー")
   end
   
   def menu_for_products()
@@ -64,9 +88,22 @@ class OrderBox < Controller
     return make_menu_form("add_product", "商品追加")
   end
   
-  def menu_main_menu()
-    return make_menu_form("main_menu", "メインメニュー")
+  def menu_for_customers()
+    tmp = ""
+    tmp += menu_main_menu()
+    tmp += menu_list_customer()
+    tmp += menu_add_customer()
+    return tmp
   end
+  
+  def menu_list_customer()
+    return make_menu_form("list_customer", "顧客一覧")
+  end
+  
+  def menu_add_customer()
+    return make_menu_form("add_customer", "顧客追加")
+  end
+  
   
 end
 
